@@ -1,0 +1,208 @@
+/* CSS Reset */
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  * {
+    margin: 0;
+  }
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  input, button, textarea, select {
+    font: inherit;
+  }
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+a {
+    text-decoration: none;
+    color: inherit;
+  }
+    button {
+        cursor: pointer;
+        text-decoration: none;
+        border: none;
+        background: none;
+        padding: 0;
+        font: inherit;
+    }
+
+/* Root element */
+:root{
+
+    /* Brand colors */
+    --clr-primary-200: hsl(215, 51%, 70%);
+    --clr-primary-400: hsl(178, 100%, 50%);
+
+    /* Neutral colors */
+    --clr-neutral-400: hsl(217, 54%, 11%);
+    --clr-neutral-300: hsl(216, 50%, 16%);
+    --clr-neutral-200: hsl(215, 32%, 27%);
+    --clr-neutral-100: hsl(0, 0%, 100%);
+
+    /* Font size */
+    --fs-base: 18px;
+    
+    /* Font family */
+    --ff-base: 'Outfit', sans-serif;
+    
+    /* Font Weight */
+    --fw-base: 400;
+    --fw-light:300;
+    --fw-bold: 600;
+
+    /* line Height */
+    --lh-body: 1.5;
+    --lh-heading: 1.2;
+}
+body{
+    display: grid;
+    place-content: center;
+    height: 100vh;
+    font-family: var(--ff-base);
+    font-size: var(--fs-base);
+    width: 100vw;
+    background-color: var(--clr-neutral-400);
+}
+.nft__card-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    padding: 1.5em;
+    width: 20rem;
+    height: auto;
+    background-color: var(--clr-neutral-300);
+    border-radius: 1em;
+    margin: 5em auto;
+}
+.nft__image-container{
+    width: 100%;
+    height: 100%;
+    border-radius: 0.5em;
+    overflow: hidden;
+    position: relative;
+}
+#hero-image{
+    width: 100%;
+    height: auto;
+}
+.nft__overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: hsla(178, 100%, 50%, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s ease-in-out;
+}
+.view-icon {
+    opacity: 0;
+}
+/* Hover Interation */
+.nft__overlay:hover, .nft__overlay:focus {
+    background-color: hsla(178, 100%, 50%, 0.5);
+    .view-icon {
+        opacity: 1;
+    }
+}
+.nft__name h1{
+    font-weight: var(--fw-bold);
+    color: var(--clr-neutral-100);
+    font-size: 20px;
+    margin: 1em 0;
+}
+/* Hover Interaction */
+button h1:hover, button h1:focus{
+    color: var(--clr-primary-400);
+}
+.nft__description{
+    font-weight: var(--fw-light);
+    color: var(--clr-primary-200);
+  
+}
+.nft__flex{
+    display: inline-flex;
+    justify-content: space-between;
+    margin: 1em 0;
+    position: relative;
+}
+.nft__etherium-price{
+    font-weight: var(--fw-bold);
+    color: var(--clr-primary-400);
+    display:inline-flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0.3em;
+}
+#eth-icon{
+    width: 11px;
+    height: 18px;
+}
+.nft__time-left{
+    font-weight: var(--fw-base);
+    color: var(--clr-primary-200);
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5em;
+}
+#clock-icon{
+    width: 17px;
+    height: 17px;
+}
+#solid{
+    border-top: 0.15px dotted var(--clr-primary-200);
+    border-bottom: 0;
+    border-right: 0;
+    border-left:0;
+    margin: 1em 0;
+}
+
+.nft__creator{
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: left;
+    margin:0;
+    gap: 1em;
+    position: relative;
+}
+#avatar{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid var(--clr-neutral-100);
+}
+.nft__creator-info{
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0.25em;
+}
+.nft__creator-info p{
+    font-weight: var(--fw-base);
+    color: var(--clr-primary-200);
+    font-size: var(--fs-base);
+}
+.nft__creator-info h2{
+    font-weight: var(--fw-light);
+    color: var(--clr-neutral-100);
+    font-size: var(--fs-base);
+}
+/* Hover Interactions */
+button h2:hover, button h2:focus{
+    color: var(--clr-primary-400);
+}
+

@@ -1,33 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- meta elements -->
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | NFT preview card component</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- link elements -->
+  <link rel="stylesheet" href="styles.css">
+  <!-- title element -->
+  <title>NFT Preview Card</title>
+  <!-- custom css-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-
-  Equilibrium #3429
-
-  Our Equilibrium collection promotes balance and calm.
-
-  0.041 ETH
-  3 days left
-  
-  Creation of Jules Wyvern
-
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+  <main>
+  <article class="nft__card-container">
+    <div class="nft__image-container">
+      <img src="/images/image-equilibrium.jpg" alt="A 6-face cube standing on a flat surface" id="hero-image"/>
+      <div class="nft__overlay">
+        <img src="./images/icon-view.svg" alt="View icon" class="view-icon"/>
+      </div>
+    </div>
+    <div class="nft__name">  
+      <button>
+        <h1>Equilibrium #3429</h1>
+      </button>
+    </div>
+    <div class="nft__description">
+      <p>Our Equilibrium collection promotes balance and calm.</p>
+    </div>
+    <div class="nft__flex">
+      <div class="nft__etherium-price">
+        <img src="/images/icon-ethereum.svg" alt="Etherium logo" id="eth-icon"/>
+        <p>0.041ETH</p>
+      </div>
+      <div class="nft__time-left">
+        <img src="/images/icon-clock.svg" alt="Clock icon" id="clock-icon"/>
+        <p>2 days left</p>
+      </div>  
+    </div> 
+    <hr id="solid">
+    <div class="nft__creator">
+      <img src="./images/image-avatar.png" alt="Creator's avatar" id="avatar"/>
+      <div class="nft__creator-info">
+        <p>Creation of</p>
+        <button><h2>Jules Wyvern</h2></button>
+      </div>
+    </div>
+  </article>
+  </main>
 </body>
 </html>
